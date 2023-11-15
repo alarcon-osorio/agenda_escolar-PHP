@@ -1,0 +1,31 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+.calendar {
+    align-content: center;
+    align-items: stretch;
+    justify-content: space-around;;
+}
+section .agenda{
+    text-align: center;
+    
+}
+.event-form {
+    margin-top: 20px;
+    align-content: center;
+    align-items: stretch;
+    justify-content: space-around;
+    color: darkgreen;
+    
+}
+
+.event-form input, .event-form button {
+    margin-right: 10px;
+}
+
+.event-list {
+    margin-top: 20px;
+}
+
+/* Otros estilos de tu elección */

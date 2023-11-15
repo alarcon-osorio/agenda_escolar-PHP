@@ -1,0 +1,36 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    text-align: center;
+}
+
+.icono {
+    text-align: center;
+    align-self: start;
+    justify-content: flex-start;
+}
+
+table {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background-color: cornsilk;
+}
+
+table, th, td {
+    border: 1px solid #aaa;
+}
+
+th, td {
+    padding: 10px;
+    text-align: center;
+}
+
+select {
+    width: 70%;
+    padding: 5px;
+}
+
+/* Estilos adicionales de tu elección */
