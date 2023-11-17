@@ -7,9 +7,17 @@
     $result_horario = $conn->query($sql_horario);
     
 ?>   
+<section class="registro">
+        <div class="container">
+            <h1>Horario escolar</h1>
+            <div class="icono">
+            <img src="imagenes/calendario.jpg" height="100px" width="100px" alt="circulares">
+            </div>
+        </div>
+    </section>
+
 <section class="horario">
   <body>
-      <h1 class="title">Horario escolar </h1>
         <table >
           <thead>
               <tr>
