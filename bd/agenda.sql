@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 16-11-2023 a las 00:05:29
+-- Tiempo de generación: 19-11-2023 a las 18:20:15
 -- Versión del servidor: 10.4.27-MariaDB
 -- Versión de PHP: 8.0.25
 
@@ -53,7 +53,8 @@ CREATE TABLE `cursos` (
 INSERT INTO `cursos` (`id`, `nombre`, `descripcion`) VALUES
 (1, 'Curso 1', 'Descripción del curso 1'),
 (2, 'Curso 2', 'Descripción del curso 2'),
-(3, 'Curso 3', 'Descripción del curso 3');
+(3, 'Curso 3', 'Descripción del curso 3'),
+(4, 'Curso 4 ', 'Descripción de curso 4');
 
 -- --------------------------------------------------------
 
@@ -101,6 +102,19 @@ INSERT INTO `estudiantes` (`id`, `nombres`, `apellidos`, `curso`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Estructura de tabla para la tabla `eventos`
+--
+
+CREATE TABLE `eventos` (
+  `id` int(11) NOT NULL,
+  `fecha` varchar(255) NOT NULL,
+  `hora` varchar(255) NOT NULL,
+  `descripcion` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- --------------------------------------------------------
+
+--
 -- Estructura de tabla para la tabla `horario`
 --
 
@@ -120,12 +134,12 @@ CREATE TABLE `horario` (
 
 INSERT INTO `horario` (`id`, `hora`, `lunes`, `martes`, `miercoles`, `jueves`, `viernes`) VALUES
 (1, '07:00AM - 09:00AM', 'Ecologia', 'Fisica', 'Ecologia', 'Orientación', 'Calculo'),
-(2, '09:00AM - 11:00AM', 'Calculo', 'Fisica', 'Ecologia', 'Orientación', 'Calculo'),
+(2, '09:00AM - 11:00AM', 'Calculo', 'Aritmetica', 'Ecologia', 'Orientación', 'Calculo'),
 (12, '11:00AM - 12:00AM', 'Calculo', 'Fisica', 'Ecologia', 'Orientación', 'Calculo'),
 (13, '12:00AM - 12:30AM', 'DESCANSO', 'DESCANSO', 'DESCANSO', 'DESCANSO', 'DESCANSO'),
 (14, '12:30AM - 01:00PM', 'Calculo', 'Fisica', 'Ecologia', 'Orientación', 'Calculo'),
 (15, '01:00PM - 01:30PM', 'Calculo', 'Fisica', 'Ecologia', 'Orientación', 'Calculo'),
-(16, '01:30PM - 02:30PM', 'Calculo', 'Fisica', 'Ecologia', 'Orientación', 'Calculo');
+(16, '01:30PM - 02:30PM', 'Calculo', 'Fisica', 'Ecologia', 'Orientación', 'Español');
 
 -- --------------------------------------------------------
 
@@ -198,6 +212,12 @@ ALTER TABLE `estudiantes`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indices de la tabla `eventos`
+--
+ALTER TABLE `eventos`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indices de la tabla `horario`
 --
 ALTER TABLE `horario`
@@ -229,19 +249,25 @@ ALTER TABLE `asistencia`
 -- AUTO_INCREMENT de la tabla `cursos`
 --
 ALTER TABLE `cursos`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT de la tabla `docentes`
 --
 ALTER TABLE `docentes`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT de la tabla `estudiantes`
 --
 ALTER TABLE `estudiantes`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- AUTO_INCREMENT de la tabla `eventos`
+--
+ALTER TABLE `eventos`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
 
 --
 -- AUTO_INCREMENT de la tabla `horario`

@@ -24,23 +24,37 @@
             <br>
             <button onclick="addEvent()">Agregar</button>
         </div>
-    
-        <div class="event-list">
-            <h2>Lista de Eventos</h2>
-            <ul id="events">
-            <?php
-
-                while ($row_eventos = $result_eventos->fetch_assoc()) {
-                   
-                    echo '<br>'; 
-                    echo '- Fecha: ' . $row_eventos['fecha'] . '<br>';
-                    echo '- Hora: ' . $row_eventos['hora'] . '<br>';
-                    echo '- Descripcion: ' . $row_eventos['descripcion'] . '<br>';
-                }
-            ?>
-            </ul>
-        </div>
     </section>
+    
+    <section class="tabla">
+        <h2>Lista de Eventos</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Fecha</th>
+                    <th>Hora</th>
+                    <th>Descripción del evento</th>    
+                </tr>
+            </thead>
+       
+
+            <?php
+            echo '<tbody>'; 
+
+            while ($row_eventos = $result_eventos->fetch_assoc()) {
+                echo '<tr>';
+                echo '<td>' . $row_eventos['fecha'] . '</td>';
+                echo '<td>' . $row_eventos['hora'] . '</td>';
+                echo '<td>' . $row_eventos['descripcion'] . '</td>';        
+                echo '</tr>';
+            }
+
+            echo '</tbody>';
+
+           
+            ?>
+        </table>
+    </section> 
     <?php
         include 'includes/footer.php';
     ?>  

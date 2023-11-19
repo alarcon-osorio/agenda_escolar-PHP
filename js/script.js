@@ -16,7 +16,7 @@ function addEvent(){
         };
 
        // Realizar la solicitud POST al archivo PHP
-        fetch('calendarioAdd.php', {
+        fetch('evento_add.php', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -25,10 +25,14 @@ function addEvent(){
         })
         .then(response => response.json())
         .then(result => {
-            console.log(result); // Puedes imprimir la respuesta en la consola del navegador
+            console.log(result); // Puedes imprimir la respuesta en la consola del navegador            
         })
         .catch(error => {
             console.error('Error:', error);
+        });
+        alert("Evento agregado correctamente");
+        setTimeout(function(){
+            window.location.href = 'evento.php';
         });
     }
 };
